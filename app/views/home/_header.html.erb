@@ -19,13 +19,14 @@
        <%if user_signed_in? %>
               <li>  <%= link_to "Sign Out", destroy_user_session_path, method: :delete,  class: 'btn btn-default' %></li>
               <li>  <%= link_to "Edit your profile", edit_user_registration_path, class: 'btn btn-default' %></li>
-              <li> <%= link_to "View Pins", pins_path %> </li>
+                            <li> <%= link_to "View Pins", pins_path %> </li>
               <li> <%= link_to "Add Pins", new_pin_path %> </li>
               
        <% else %>
               <li> <%= link_to "Login", new_user_session_path, class: 'btn btn-default' %></li>
               <li><%= link_to "JOIN", new_user_registration_path, class: 'btn btn-alert' %></li>
        <% end %>
+
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
