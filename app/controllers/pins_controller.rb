@@ -1,5 +1,7 @@
 class PinsController < ApplicationController
-
+  before_action :set_pin, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :correct_user, only: [:edit, :update, :destroy] 
 
   respond_to :html
 
@@ -31,7 +33,7 @@ class PinsController < ApplicationController
       redirect_to @pin, notice: 'Pin was successfully updated.'
     else
       render action: 'edit'
-    end
+   end
   end
 
   def destroy
