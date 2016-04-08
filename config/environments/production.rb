@@ -78,4 +78,16 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   
   config.action_mailer.default_url_options = { host: 'http://schedulitis.herokuapp.com' }
+  
+# config/environments/production.rb
+config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['schedulitis'],
+    :access_key_id => ENV['AKIAJGWMLVU7VBZOIK2A'],
+    :secret_access_key => ENV['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
+']
+  }
+}
+
 end
