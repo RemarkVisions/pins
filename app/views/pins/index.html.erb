@@ -8,11 +8,11 @@
 <%= image_tag pin.image.url :medium%></br>
   <%= pin.description %> </br>
         <%= link_to 'Show', pin %>
-      <%if user_signed_in? %>
+      <%if pin.user == current_user  %>
         <%= link_to 'Edit', edit_pin_path(pin) %>
         <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
       <% end %>
-    <% end %>
+<% end %>
 
 <br>
 
