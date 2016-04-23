@@ -32,6 +32,8 @@ end
 
 gem 'omniauth-google-oauth2', '~> 0.4.1'
 
+gem 'omniauth', '~> 1.3', '>= 1.3.1'
+
 group :production do
   gem 'pg',     '0.17.1'
   gem 'rails_12factor', '0.0.2'
